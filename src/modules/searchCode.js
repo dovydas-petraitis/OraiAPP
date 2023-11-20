@@ -9,7 +9,7 @@ const searchCode = ()=> {
         ajaxService(searchTerm,city)
         .then(result=>searchResponse=result)
         .then(()=>document.querySelector('.result').value=searchResponse.data[0].post_code)
-        
+
     })
 }
 
