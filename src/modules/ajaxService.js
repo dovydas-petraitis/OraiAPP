@@ -1,7 +1,6 @@
-const ajaxService = (address, city)=> {
-    const url = "https://api.postit.lt/v2/?city="
-    const key = "sQqs8WirCf09vcIk84OD"
-    return fetch(`${url}${city}&address=${address}$key=${key}`)
+const ajaxService = (city)=> {
+    const url = "https://api.meteo.lt/v1/places/"
+    return fetch(`${city}/forecasts/long-term`)
     .then(response=>response.json())
 
 }

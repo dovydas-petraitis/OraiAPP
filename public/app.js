@@ -28,10 +28,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var ajaxService = function ajaxService(address, city) {
-  var url = "https://api.postit.lt/v2/?city=";
-  var key = "sQqs8WirCf09vcIk84OD";
-  return fetch("".concat(url).concat(city, "&address=").concat(address, "$key=").concat(key)).then(function (response) {
+var ajaxService = function ajaxService(city) {
+  var url = "https://api.meteo.lt/v1/places/";
+  return fetch("".concat(city, "/forecasts/long-term")).then(function (response) {
     return response.json();
   });
 };
